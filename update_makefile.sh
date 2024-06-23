@@ -17,7 +17,7 @@ PKG_MD5SUM=$(echo $latest_info | cut -d, -f2)
 PKG_VERSION=$(echo $PKG_SOURCE_URL | awk -F/ '{print $(NF-1)}')
 
 # 更新Makefile
-MAKEFILE_PATH="Makefile"
+MAKEFILE_PATH="openwrt/package/uugamebooster/Makefile"
 sed -i "s|PKG_VERSION:=.*|PKG_VERSION:=$PKG_VERSION|g" $MAKEFILE_PATH
 sed -i "s|PKG_SOURCE_URL:=.*|PKG_SOURCE_URL:=$PKG_SOURCE_URL|g" $MAKEFILE_PATH
 sed -i "s|PKG_MD5SUM:=.*|PKG_MD5SUM:=$PKG_MD5SUM|g" $MAKEFILE_PATH
